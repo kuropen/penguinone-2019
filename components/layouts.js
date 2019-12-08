@@ -26,7 +26,7 @@ const Layouts = (props) => {
                 <nav id="navigation" className="hidden md:block kp-gradientBorder2 md:pb-2 md:mb-4">
                     <h2 className="font-semibold text-lg md:hidden">Menu</h2>
                     <ul className="md:flex md:flex-row md:justify-center">
-                        <li className="md:px-2 md:border-l-2 md:border-r-2"><Link href="/"><a>Top</a></Link></li>
+                        <li className="md:px-2 md:border-l-2 md:border-r-2"><a href="/">Top</a></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/profile"><a>About me</a></Link></li>
                         <li className="md:px-2 md:border-r-2"><a href="https://kuropen.goat.me/" target="_blank" rel="noopener">Y.O.N.O. (Blog)</a></li>
                         <li className="md:px-2 md:border-r-2"><a href="https://twitter.com/kuropen_aizu" target="_blank" rel="noopener">Twitter</a></li>

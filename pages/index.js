@@ -3,7 +3,6 @@ import '../styles/index.css';
 import getYonoArticles from '../utilities/getYonoArticles';
 import classnames from 'classnames';
 import {ArrowRightCircle, Book} from 'react-feather';
-import noteIcon from '../images/glyphicons-basic-40-notes.svg';
 
 const YONO_FEED_NUM = 3;
 const YONO_MOBILE_FEED_NUM = 2;

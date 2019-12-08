@@ -37,8 +37,9 @@ const Layouts = (props) => {
                 <section id="main">
                     {props.children}
                 </section>
-                <footer className="py-4 pr-4 text-right">
-                    <address>All rights reserved. Copyright &copy; Kuropen.</address>
+                <footer className="py-4 px-4 md:flex md:flex-row">
+                    <p className="md:w-1/2">Copyright &copy; Kuropen. </p>
+                    <p className="md:w-1/2 md:text-right"><Link href="/copyright"><a className="underline">著作権と使用しているコンポーネントについて</a></Link></p>
                 </footer>
             </div>
         </div>

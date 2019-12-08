@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-white;
+    @apply text-gray-800;
+}
+
+.kp-gradientBorder1 {
+    border-top: 6px solid;
+    border-image: linear-gradient(to right, #000000, #119988 5%, #119988 95%, #000000);
+    border-image-slice: 1;
+}
+.kp-gradientBorder2 {
+    border-bottom: 6px solid;
+    border-image: linear-gradient(to right, #ffffff, #228866 20%, #228866 80%, #ffffff);
+    border-image-slice: 1;
+}
+
+nav ul li {
+    @apply my-2;
+}
+
+#main {
+    @apply mb-4;
+}
+
+#main a {
+    @apply text-blue-700;
+}
+
+#main h2 {
+    @apply text-xl;
+    @apply font-semibold;
+    @apply my-2;
+}
+
+#main h3 {
+    @apply text-lg;
+    @apply font-semibold;
+    @apply my-2;
+}
+
+#main ul {
+    @apply list-disc;
+}
+
+#main ol {
+    @apply list-decimal;
+}
+
+#main ul, #main ol {
+    @apply ml-6;
+}

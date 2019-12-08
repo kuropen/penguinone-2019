@@ -1,0 +1,11 @@
+.yonoArticleInfo {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.yonoArticleBorder {
+    border-color: #00197F;
+}
+
+.kp-gradientBorder-T1 {
+    border-image: linear-gradient(to right, #228866, #000080);
+    border-image-slice: 1;
+}

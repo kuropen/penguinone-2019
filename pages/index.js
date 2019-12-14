@@ -1,3 +1,4 @@
+import React from 'react';
 import Layouts from '../components/layouts';
 import '../styles/index.css';
 import getYonoArticles from '../utilities/getYonoArticles';

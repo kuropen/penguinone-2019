@@ -1,0 +1,19 @@
+{
+    "default": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-penguinone-2019-default-112110-authRole",
+            "UnauthRoleArn": "arn:aws:iam::108967652205:role/amplify-penguinone-2019-default-112110-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::108967652205:role/amplify-penguinone-2019-default-112110-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-penguinone-2019-default-112110-deployment",
+            "UnauthRoleName": "amplify-penguinone-2019-default-112110-unauthRole",
+            "StackName": "amplify-penguinone-2019-default-112110",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:108967652205:stack/amplify-penguinone-2019-default-112110/63f91ca0-1e18-11ea-96a2-06c25460bea0"
+        },
+        "categories": {
+            "auth": {
+                "penguinone20199e880dd4": {}
+            }
+        }
+    }
+}

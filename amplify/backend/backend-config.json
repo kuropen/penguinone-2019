@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"penguinone20199e880dd4": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"penguinone": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

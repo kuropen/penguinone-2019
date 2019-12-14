@@ -11,17 +11,18 @@ export default class SpMenuToggleIcon extends React.Component {
     toggle = () => {
         // Doing jQuery-way instead of React-way because
         // this is mobile-exclusive process in responsive style pages.
-        const isHidden = $('#navigation').css('display') === 'none';
+        const navigationBox = $('#navigation');
+        const isHidden = navigationBox.css('display') === 'none';
         if (isHidden) {
-            $('#navigation').show("slow");
+            navigationBox.show("slow");
         } else {
-            $('#navigation').hide("slow");
+            navigationBox.hide("slow");
         }
-        $(window).on('resize', () => {
+        $(window).off('resize').on('resize', () => {
             // Clearing ad-hoc state upon resize.
             // This is because the navigation should always be available
             // when the width of the window becomes the desktop-size.
-            $('#navigation').removeAttr('style');
+            navigationBox.removeAttr('style');
         });
     };
 

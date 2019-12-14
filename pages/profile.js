@@ -1,21 +1,16 @@
-import Layouts from '../components/layouts';
-import ReactMarkdown from 'react-markdown';
+import React from 'react';
+import Router from 'next/router';
 
-const Profile = (props) => {
-  return (
-    <Layouts>
-        <div className="md:w-10/12 mx-auto">
-            <ReactMarkdown source={props.mdContent} />
-        </div>
-    </Layouts>
-  );
-};
-
-Profile.getInitialProps = async () => {
-    const content = await import('../texts/profile.md');
-    return {
-        mdContent: content.default
-    };
-};
-
-export default Profile;
+export default class extends React.Component {
+    static async getInitialProps({ res }) {
+        if (res) {
+            res.writeHead(302, {
+                Location: '/p/profile'
+            });
+            res.end();
+        } else {
+            Router.push('/p/profile');
+        }
+        return {};
+    }
+}

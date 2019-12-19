@@ -46,7 +46,6 @@ const BlogFeedList = (props) => {
 };
 
 const Index = (props) => {
-  console.log(props);
   return (
     <Layouts>
       <div className="md:w-10/12 mx-auto">

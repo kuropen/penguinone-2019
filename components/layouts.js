@@ -28,7 +28,7 @@ const Layouts = (props) => {
                     <h2 className="font-semibold text-lg md:hidden">Menu</h2>
                     <ul className="md:flex md:flex-row md:justify-center">
                         <li className="md:px-2 md:border-l-2 md:border-r-2"><a href="/">Top</a></li>
-                        <li className="md:px-2 md:border-r-2"><Link href="/p/[mdfile]" as={`/p/profile`}><a>About me</a></Link></li>
+                        <li className="md:px-2 md:border-r-2"><Link href="/profile"><a>About me</a></Link></li>
                         <li className="md:px-2 md:border-r-2"><a href="https://kuropen.goat.me/" target="_blank" rel="noopener">Y.O.N.O. (Blog)</a></li>
                         <li className="md:px-2 md:border-r-2"><a href="https://twitter.com/kuropen_aizu" target="_blank" rel="noopener">Twitter</a></li>
                         <li className="md:px-2 md:border-r-2"><a href="https://facebook.com/yuda.hirochika" target="_blank" rel="noopener">Facebook</a></li>
@@ -40,7 +40,7 @@ const Layouts = (props) => {
                 </section>
                 <footer className="py-4 px-4 md:flex md:flex-row">
                     <p className="md:w-1/2">Copyright &copy; Kuropen. </p>
-                    <p className="md:w-1/2 md:text-right"><Link href="/p/[mdfile]" as={`/p/copyright`}><a className="underline">著作権と使用しているコンポーネントについて</a></Link></p>
+                    <p className="md:w-1/2 md:text-right"><Link href="/copyright"><a className="underline">著作権と使用しているコンポーネントについて</a></Link></p>
                 </footer>
             </div>
         </div>

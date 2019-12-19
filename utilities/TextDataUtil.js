@@ -1,6 +1,4 @@
-import Amplify, {Storage} from 'aws-amplify';
-import awsmobile from "../aws-exports";
-Amplify.configure(awsmobile);
+import {Storage} from 'aws-amplify';
 
 import * as TextEncoding from 'text-encoding';
 const TextDecoder = TextEncoding.TextDecoder;

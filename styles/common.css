@@ -30,26 +30,30 @@ nav ul li {
     @apply text-blue-700;
 }
 
-#main h2 {
+#main h2:not(.no-default-size) {
     @apply text-xl;
-    @apply font-semibold;
     @apply my-2;
+}
+
+#main h2 {
+    @apply font-semibold;
+}
+
+#main h3:not(.no-default-size) {
+    @apply text-lg;
 }
 
 #main h3 {
-    @apply text-lg;
     @apply font-semibold;
     @apply my-2;
 }
 
-#main ul {
+#main ul:not(.submenu) {
     @apply list-disc;
+    @apply ml-6;
 }
 
 #main ol {
     @apply list-decimal;
-}
-
-#main ul, #main ol {
     @apply ml-6;
 }

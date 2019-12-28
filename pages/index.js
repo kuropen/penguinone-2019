@@ -1,9 +1,14 @@
 import React from 'react';
 import Layouts from '../components/layouts';
 import '../styles/index.css';
-import getYonoArticles from '../utilities/getYonoArticles';
+import {getPagesInCategory} from "../utilities/PrismicApi";
 import classnames from 'classnames';
 import {ArrowRightCircle, Book} from 'react-feather';
+import Link from 'next/link';
+import {RichText, Date} from "prismic-reactjs";
+import noImage from "../images/no_image.png";
+
+const moment = require('moment');
 
 const YONO_FEED_NUM = 3;
 const YONO_MOBILE_FEED_NUM = 2;
@@ -28,13 +33,13 @@ const BlogFeedList = (props) => {
     );
     return (
       <div className={classes} key={article.id}>
-        <a href={article.url} target="_blank" rel="noopener" className="block">
-          <img src={article.image_url} alt="" className="max-w-full" />
+        <Link href="/blog/[article]" as={"/blog/" + article.id}><a className="block">
+          <img src={article.data.cover_image.url || noImage} alt="" className="max-w-full" />
           <div className="absolute bottom-0 w-full text-white yonoArticleInfo">
-            <p className="text-lg">{article.title}</p>
-            <p>{article.published_at}</p>
+            <p className="text-lg">{RichText.asText(article.data.title)}</p>
+            <p>{moment(article.data.posting_date).format('YYYY-MM-DD')}</p>
           </div>
-        </a>
+        </a></Link>
       </div>
     );
   });
@@ -48,7 +53,7 @@ const BlogFeedList = (props) => {
 const Index = (props) => {
   return (
     <Layouts>
-      <div className="md:w-10/12 mx-auto">
+      <div>
         <p className="border-2 rounded-lg kp-gradientBorder-T1 md:text-center p-1">
           2019年12月7日、当サイトはリニューアルオープンしました。<br className="md:hidden" />なお、一部準備中のコンテンツや、調整中のシステムがございます。<br />
           お気づきの点がございましたら、SNSなどで管理者までご連絡ください。<br />
@@ -59,18 +64,24 @@ const Index = (props) => {
           <span className="block">Recent blog articles</span>
         </h2>
         <BlogFeedList articles={props.blogArticles} />
-        <p className="mt-2"><a href="https://kuropen.goat.me/" target="_blank" rel="noopener" className="flex items-center justify-end">
+        <p className="mt-2"><Link href="/blog/index" as="/blog"><a className="flex items-center justify-end">
           <span className="block">Read more articles</span><ArrowRightCircle />
-        </a></p>
+        </a></Link></p>
       </div>
     </Layouts>
   )
 };
 
 Index.getInitialProps = async () => {
-  const yonoArticles = await getYonoArticles(YONO_FEED_NUM);
+  const pages = await getPagesInCategory(
+      'blog',
+      {
+        orderings : '[my.blog.posting_date desc]',
+        pageSize: YONO_FEED_NUM
+      }
+  );
   return {
-    blogArticles: yonoArticles
+    blogArticles: pages
   };
 };
 

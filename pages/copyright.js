@@ -1,20 +1,20 @@
 import React from 'react';
-import PrismicApi from "../utilities/PrismicApi";
+import {getSinglePage} from "../utilities/PrismicApi";
 import {RichText} from "prismic-reactjs";
 import Layouts from "../components/layouts";
 
 
 export default class extends React.Component {
     static async getInitialProps() {
-        const copyrightDocument = await (await PrismicApi()).getSingle('copyright');
+        const copyrightDocument = await getSinglePage('copyright');
         return {
             doc: copyrightDocument
         };
     }
     render() {
         return (
-            <Layouts>
-                <div className="md:w-10/12 mx-auto">
+            <Layouts title="Copyright">
+                <div>
                     <div className="float-right">
                         {RichText.render(this.props.doc.data.cc_banner)}
                     </div>

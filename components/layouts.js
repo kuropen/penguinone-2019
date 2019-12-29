@@ -21,7 +21,7 @@ const Layouts = (props) => {
                     <h2 className="no-default-size text-3xl md:text-4xl">{props.title}</h2>
                     {subMenu}
                 </div>
-                <div className="md:w-3/4 pr-4">
+                <div className="md:w-3/4 md:pr-4">
                     {props.children}
                 </div>
             </section>
@@ -53,7 +53,7 @@ const Layouts = (props) => {
                 <nav id="navigation" className="hidden md:block kp-gradientBorder2 md:pb-2 md:mb-4">
                     <h2 className="font-semibold text-lg md:hidden">Menu</h2>
                     <ul className="md:flex md:flex-row md:justify-center">
-                        <li className="md:px-2 md:border-l-2 md:border-r-2"><Link href="/index" as="/"><a>Top</a></Link></li>
+                        <li className="md:px-2 md:border-l-2 md:border-r-2"><a href="/">Top</a></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/profile"><a>About me</a></Link></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/blog/index" as="/blog"><a>Blog</a></Link></li>
                         <li className="md:px-2 md:border-r-2"><a href="https://twitter.com/kuropen_aizu" target="_blank" rel="noopener">Twitter</a></li>

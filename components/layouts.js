@@ -10,6 +10,7 @@ import SpMenuToggleIcon from './spMenuToggleIcon';
  */
 const Layouts = (props) => {
     let innerContent;
+    let title;
     if (props.title) {
         let subMenu = (<React.Fragment/>);
         if (props.subMenu) {
@@ -26,6 +27,7 @@ const Layouts = (props) => {
                 </div>
             </section>
         );
+        title = `${props.title} - Penguinone`;
     } else {
         innerContent = (
             <section id="main">
@@ -34,11 +36,13 @@ const Layouts = (props) => {
                 </div>
             </section>
         );
+        title = 'Penguinone';
     }
     return (
         <div>
             <Head>
-                <title key="title">Penguinone</title>
+                <title key="title">{title}</title>
+                <link rel="icon" type="image/png" href={Penguin} key="favicon" />
             </Head>
             <header className="flex flex-row items-center md:justify-center py-4 mb-4 bg-black text-white kp-gradientBorder1">
                 <div className="mx-2">

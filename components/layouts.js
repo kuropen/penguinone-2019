@@ -19,7 +19,7 @@ const Layouts = (props) => {
         innerContent = (
             <section id="main" className="md:flex md:flex-row">
                 <div className="md:w-1/4 md:pr-6 md:text-right">
-                    <h2 className="no-default-size text-3xl md:text-4xl">{props.title}</h2>
+                    <h2 className="no-default-size noto text-3xl md:text-4xl">{props.title}</h2>
                     {subMenu}
                 </div>
                 <div className="md:w-3/4 md:pr-4">
@@ -42,6 +42,7 @@ const Layouts = (props) => {
         <div>
             <Head>
                 <title key="title">{title}</title>
+                <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Sawarabi+Gothic" rel="stylesheet" />
                 <link rel="icon" type="image/png" href={Penguin} key="favicon" />
             </Head>
             <header className="flex flex-row items-center md:justify-center py-4 mb-4 bg-black text-white kp-gradientBorder1">
@@ -60,9 +61,7 @@ const Layouts = (props) => {
                         <li className="md:px-2 md:border-l-2 md:border-r-2"><a href="/">Top</a></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/profile"><a>About me</a></Link></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/blog/index" as="/blog"><a>Blog</a></Link></li>
-                        <li className="md:px-2 md:border-r-2"><a href="https://twitter.com/kuropen_aizu" target="_blank" rel="noopener">Twitter</a></li>
-                        <li className="md:px-2 md:border-r-2"><a href="https://facebook.com/yuda.hirochika" target="_blank" rel="noopener">Facebook</a></li>
-                        <li className="md:px-2 md:border-r-2"><a href="https://gingadon.com/@kuropen" target="_blank" rel="noopener">Mastodon (ActivityPub)</a></li>
+                        <li className="md:px-2 md:border-r-2"><Link href="/social/index" as="/social"><a>SNS Accounts</a></Link></li>
                     </ul>
                 </nav>
                 {innerContent}

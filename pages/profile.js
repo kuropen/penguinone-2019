@@ -1,5 +1,6 @@
 import React from 'react';
 import {getSinglePage} from "../utilities/PrismicApi";
+import linkResolver from "../utilities/PrismicLinkResolver";
 import {RichText} from "prismic-reactjs";
 import Layouts from "../components/layouts";
 
@@ -15,7 +16,7 @@ export default class extends React.Component {
         return (
             <Layouts title="Profile">
                 <div>
-                    {RichText.render(this.props.doc.data.text)}
+                    {RichText.render(this.props.doc.data.text, linkResolver)}
                 </div>
             </Layouts>
         );

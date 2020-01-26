@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layouts from "../../components/layouts";
 import {getSinglePageInCategory} from "../../utilities/PrismicApi"
+import linkResolver from "../../utilities/PrismicLinkResolver";
 import {RichText} from "prismic-reactjs";
 import {ArrowUpCircle, ArrowLeft} from "react-feather";
 import Link from 'next/link';
@@ -39,7 +40,7 @@ export default class extends React.Component {
                 <a name="page-head" id="page-head"/>
                 <h2>{RichText.asText(this.props.page.data.title)}</h2>
                 <div>
-                    {RichText.render(this.props.page.data.text)}
+                    {RichText.render(this.props.page.data.text, linkResolver)}
                 </div>
                 <div className="text-right">
                     <a href="#page-head">ページトップに戻る<ArrowUpCircle className="inline-block"/></a>

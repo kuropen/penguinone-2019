@@ -5,6 +5,11 @@
 body {
     @apply bg-white;
     @apply text-gray-800;
+    font-family: "Sawarabi Gothic", sans-serif;
+}
+
+.noto {
+    font-family: "Noto Sans", sans-serif;
 }
 
 .kp-gradientBorder1 {
@@ -48,7 +53,7 @@ nav ul li {
     @apply my-2;
 }
 
-#main ul:not(.submenu) {
+#main ul:not(.submenu):not(.social_account_list) {
     @apply list-disc;
     @apply ml-6;
 }
@@ -56,4 +61,14 @@ nav ul li {
 #main ol {
     @apply list-decimal;
     @apply ml-6;
+}
+
+#main p {
+    @apply mt-2;
+    @apply mb-2;
+}
+
+#main .social_account_list p {
+    @apply mt-1;
+    @apply mb-1;
 }

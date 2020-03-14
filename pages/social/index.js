@@ -65,7 +65,7 @@ export default class extends React.Component {
         const accounts = await getPagesInCategory(
             'social_accounts',
             {
-                orderings : '[my.social_accounts.account_type]',
+                orderings : '[my.social_accounts.account_type, my.social_accounts.account_name]',
             }
         );
         const policyDocument = await getSinglePage('social_policy');

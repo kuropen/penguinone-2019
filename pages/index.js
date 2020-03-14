@@ -54,10 +54,9 @@ const Index = (props) => {
   return (
     <Layouts>
       <div>
-        <p className="border-2 rounded-lg kp-gradientBorder-T1 md:text-center p-1">
-          2019年12月7日、当サイトはリニューアルオープンしました。<br className="md:hidden" />なお、一部準備中のコンテンツや、調整中のシステムがございます。<br />
-          お気づきの点がございましたら、SNSなどで管理者までご連絡ください。<br />
-          <span className="text-sm">（地元路線の埼京線が相鉄線と直通したのを記念し、埼京線で使われているLCDをオマージュしたデザインで展開中です）</span>
+        <p className="border-2 rounded-lg border-yellow-500 md:text-center p-1">
+          公開から3ヶ月以上が経過しておりますが現在も準備中のコンテンツがございます。<br />
+          お待たせして申し訳ございません。
         </p>
         <h2 className="flex items-center">
           <Book className="w-8 h-8" />

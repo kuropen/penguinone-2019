@@ -60,7 +60,7 @@ const Layouts = (props) => {
                     <ul className="md:flex md:flex-row md:justify-center">
                         <li className="md:px-2 md:border-l-2 md:border-r-2"><a href="/">Top</a></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/profile"><a>About me</a></Link></li>
-                        <li className="md:px-2 md:border-r-2"><Link href="/portfolio/index" as="/portfolio"><a>Portfolio</a></Link></li>
+                        {/*<li className="md:px-2 md:border-r-2"><Link href="/portfolio/index" as="/portfolio"><a>Portfolio</a></Link></li>*/}
                         <li className="md:px-2 md:border-r-2"><Link href="/blog/index" as="/blog"><a>Blog</a></Link></li>
                         <li className="md:px-2 md:border-r-2"><Link href="/social/index" as="/social"><a>SNS Accounts</a></Link></li>
                     </ul>
